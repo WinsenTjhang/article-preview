@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope',
+        sans-serif;
+    font-size: 0.8rem;
+    background-color: hsl(210, 46%, 95%);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.wrapper {
+    margin: 0 18px;
+    position: relative;
+    box-shadow: 0 5px 80px -65px black;
+    border-radius: 10px;
+}
+
+.heading {
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.small-text {
+    color: rgb(51, 156, 151);
+}
+
+/* Left-image */
+
+
+.article-image {
+    border-radius: 10px 10px 0 0;
+    max-width: 394px;
+    width: 100%;
+    min-height: 170px;
+    height: 32vh;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: -5px;
+}
+
+/* Right content */
+
+.text-box {
+    max-width: 334px;
+    max-height: 60vh;
+    padding: 1.5vh 30px 0;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.author {
+    display: flex;
+    width: 100%;
+}
+
+.pp {
+    align-self: center;
+    width: 55px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.name-profile {
+    padding: 0 15px 0 0;
+    margin-left: 15px;
+}
+
+/* Share icon */
+
+.share-pp {
+    margin-left: 20px;
+    fill: #6E8098;
+}
+
+.share-pop {
+    fill: #6E8098;
+    margin-left: 30px;
+}
+
+.share-pp:hover,
+.share-pop:hover {
+    fill: white;
+}
+
+.circle-icon {
+    background: rgb(211, 242, 252);
+    padding: 7px 6px 6px 7px !important;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+}
+
+.circle-icon:hover {
+    background-color: hsl(214, 17%, 51%);
+}
+
+/* Share Pop-out */
+
+.open {
+    display: block !important;
+}
+
+/* Method 1, Pop up */
+/* .blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+} */
+
+.speech-bubble-wrap {
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 0 0 .6em .6em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+
+.speech-bubble {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.speech-bubble>* {
+    align-self: center;
+    padding: 19px 0;
+}
+
+.share-text {
+    color: rgb(139, 153, 167);
+    font-size: 1rem;
+    letter-spacing: 5px;
+    margin-left: 10px;
+}
+
+/* Attr */
+
+.attribution {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution p {
+    margin: 0;
+}
+
+@media(min-width: 565px) {
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        max-height: 270px;
+        max-width: 812px;
+        min-height: 0;
+        margin: 0;
+        box-shadow: 3px 8px 45px -33px black;
+    }
+
+    .article-image {
+        border-radius: 10px 0 0 10px;
+        object-position: left;
+        height: 38vh;
+        width: 40%;
+        margin-bottom: 0;
+        min-width: 180px;
+        min-height: 270px;
+        max-height: 270px;
+    }
+
+    .text-box {
+        max-width: 480px;
+        min-width: 385px;
+        max-height: 65vh;
+        min-height: 250px;
+        border-radius: 0 10px 10px 0;
+        padding: 2.5% 40px 0;
+    }
+
+    .share-pp {
+        position: absolute;
+        margin: 0;
+        bottom: 45px;
+        right: 52px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .share-text {
+        padding-right: 5px;
+        padding-left: 10px;
+        margin: 0;
+        color: rgb(139, 153, 167);
+        letter-spacing: 5px;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .icon {
+        padding: 3px 8px 0;
+    }
+
+    .speech-bubble-wrap {
+        border-radius: .6rem;
+        bottom: 95px;
+        right: -62px;
+        width: 25%;
+        min-width: 245px;
+        box-shadow: 3px 6px 35px -13px black;
+    }
+
+    .speech-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 14px solid transparent;
+        border-top-color: hsl(217, 19%, 35%);
+        border-bottom: 0;
+        margin-left: -20px;
+        margin-bottom: -13px;
+    }
+}
